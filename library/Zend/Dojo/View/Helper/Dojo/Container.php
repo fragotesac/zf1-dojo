@@ -168,7 +168,7 @@ class Zend_Dojo_View_Helper_Dojo_Container
     /**
      * Set view object
      *
-     * @param  Zend_Dojo_View_Interface $view
+     * @param  Zend_View_Interface $view
      * @return void
      */
     public function setView(Zend_View_Interface $view)
@@ -211,7 +211,7 @@ class Zend_Dojo_View_Helper_Dojo_Container
     /**
      * Add options for the Dojo Container to use
      *
-     * @param array|Zend_Config Array or Zend_Config object with options to use
+     * @param array|Zend_Config $options Array or Zend_Config object with options to use
      * @return Zend_Dojo_View_Helper_Dojo_Container
      */
     public function setOptions($options)
@@ -514,8 +514,7 @@ class Zend_Dojo_View_Helper_Dojo_Container
     /**
      * Set Dojo configuration
      *
-     * @param  string $option
-     * @param  mixed $value
+     * @param  array $config
      * @return Zend_Dojo_View_Helper_Dojo_Container
      */
     public function setDjConfig(array $config)
