@@ -45,7 +45,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
 
     /**
      * Label field of item
-     * @var string
+     * @var string|null
      */
     protected $_label;
 
@@ -172,7 +172,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * Item retrieved will be flattened to an array.
      *
      * @param  string $id
-     * @return array
+     * @return array|null
      */
     public function getItem($id)
     {
@@ -247,7 +247,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * Set label to use for displaying item associations
      *
      * @param  string|null $label
-     * @return Zend_Dojo_Data
+     * @return $this
      */
     public function setLabel($label)
     {
@@ -482,7 +482,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
     /**
      * Iterator: get next item
      *
-     * @return void
+     * @return false|mixed
      */
     public function next()
     {
@@ -492,7 +492,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
     /**
      * Iterator: rewind to first value in collection
      *
-     * @return void
+     * @return false|mixed
      */
     public function rewind()
     {

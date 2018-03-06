@@ -136,7 +136,7 @@ class Zend_Dojo_Form_Element_DateTextBox extends Zend_Dojo_Form_Element_Validati
      * Set date format pattern
      *
      * @param  string $pattern
-     * @return Zend_Dojo_Form_Element_NumberTextBox
+     * @return $this
      */
     public function setDatePattern($pattern)
     {
@@ -159,7 +159,7 @@ class Zend_Dojo_Form_Element_DateTextBox extends Zend_Dojo_Form_Element_Validati
      *
      * @see    $_allowedFormatTypes
      * @param  string $formatLength
-     * @return Zend_Dojo_Form_Element_NumberTextBox
+     * @return $this
      */
     public function setFormatLength($formatLength)
     {
@@ -188,7 +188,7 @@ class Zend_Dojo_Form_Element_DateTextBox extends Zend_Dojo_Form_Element_Validati
      *
      * @see    $_allowedSelectorTypes
      * @param  string $selector
-     * @return Zend_Dojo_Form_Element_NumberTextBox
+     * @return $this
      */
     public function setSelector($selector)
     {

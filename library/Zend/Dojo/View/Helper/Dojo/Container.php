@@ -680,7 +680,7 @@ class Zend_Dojo_View_Helper_Dojo_Container
     /**
      * Start capturing routines to run onLoad
      *
-     * @return bool
+     * @return null
      */
     public function onLoadCaptureStart()
     {
@@ -691,7 +691,7 @@ class Zend_Dojo_View_Helper_Dojo_Container
 
         $this->_captureLock = true;
         ob_start();
-        return;
+        return null;
     }
 
     /**

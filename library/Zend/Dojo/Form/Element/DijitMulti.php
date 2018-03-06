@@ -74,7 +74,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      * Set separator
      *
      * @param mixed $separator
-     * @return self
+     * @return $this
      */
     public function setSeparator($separator)
     {
@@ -101,7 +101,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      *
      * @param  string $option
      * @param  string $value
-     * @return Zend_Form_Element_Multi
+     * @return $this
      */
     public function addMultiOption($option, $value = '')
     {
@@ -118,7 +118,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      * Add many options at once
      *
      * @param  array $options
-     * @return Zend_Form_Element_Multi
+     * @return $this
      */
     public function addMultiOptions(array $options)
     {
@@ -139,7 +139,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      * Set all options at once (overwrites)
      *
      * @param  array $options
-     * @return Zend_Form_Element_Multi
+     * @return $this
      */
     public function setMultiOptions(array $options)
     {
@@ -151,7 +151,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      * Retrieve single multi option
      *
      * @param  string $option
-     * @return mixed
+     * @return mixed|null
      */
     public function getMultiOption($option)
     {
@@ -203,7 +203,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
     /**
      * Clear all options
      *
-     * @return Zend_Form_Element_Multi
+     * @return $this
      */
     public function clearMultiOptions()
     {
@@ -216,7 +216,7 @@ abstract class Zend_Dojo_Form_Element_DijitMulti extends Zend_Dojo_Form_Element_
      * Set flag indicating whether or not to auto-register inArray validator
      *
      * @param  bool $flag
-     * @return Zend_Form_Element_Multi
+     * @return $this
      */
     public function setRegisterInArrayValidator($flag)
     {
