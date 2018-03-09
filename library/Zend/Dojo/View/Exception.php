@@ -21,11 +21,6 @@
  */
 
 /**
- * @see Zend_Dojo_Exception
- */
-// require_once 'Zend/Dojo/Exception.php';
-
-/**
  * @category   Zend
  * @package    Zend_Dojo
  * @subpackage View

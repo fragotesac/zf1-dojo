@@ -19,9 +19,6 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-/** Zend_Dojo_Form_Element_NumberTextBox */
-// require_once 'Zend/Dojo/Form/Element/NumberTextBox.php';
-
 /**
  * CurrencyTextBox dijit
  *
@@ -75,7 +72,6 @@ class Zend_Dojo_Form_Element_CurrencyTextBox extends Zend_Dojo_Form_Element_Numb
         $symbol = strtoupper((string) $symbol);
         $length = strlen($symbol);
         if (3 > $length) {
-            // require_once 'Zend/Form/Element/Exception.php';
             throw new Zend_Form_Element_Exception('Invalid symbol provided; please provide ISO 4217 alphabetic currency code');
         }
         if (3 < $length) {

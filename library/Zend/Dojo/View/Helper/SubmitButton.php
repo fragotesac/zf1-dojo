@@ -20,9 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_View_Helper_Button */
-// require_once 'Zend/Dojo/View/Helper/Button.php';
-
 /**
  * Dojo Button dijit tied to submit input
  *

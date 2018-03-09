@@ -20,9 +20,6 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-/** Zend_Dojo */
-// require_once 'Zend/Dojo.php';
-
 /**
  * Container for  Dojo View Helper
  *
@@ -288,7 +285,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
     public function requireModule($modules)
     {
         if (!is_string($modules) && !is_array($modules)) {
-            // require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('Invalid module name specified; must be a string or an array of strings');
         }
 
@@ -296,7 +292,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
 
         foreach ($modules as $mod) {
             if (!preg_match('/^[a-z][a-z0-9._-]+$/i', $mod)) {
-                // require_once 'Zend/Dojo/View/Exception.php';
                 throw new Zend_Dojo_View_Exception(sprintf('Module name specified, "%s", contains invalid characters', (string) $mod));
             }
 
@@ -572,7 +567,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
     public function addStylesheetModule($module)
     {
         if (!preg_match('/^[a-z0-9]+\.[a-z0-9_-]+(\.[a-z0-9_-]+)*$/i', $module)) {
-            // require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('Invalid stylesheet module specified');
         }
         if (!in_array($module, $this->_stylesheetModules)) {
@@ -685,7 +679,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
     public function onLoadCaptureStart()
     {
         if ($this->_captureLock) {
-            // require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('Cannot nest onLoad captures');
         }
 
@@ -718,7 +711,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
     public function addDijit($id, array $params)
     {
         if (array_key_exists($id, $this->_dijits)) {
-            // require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception(sprintf('Duplicate dijit with id "%s" already registered', $id));
         }
 
@@ -843,7 +835,6 @@ class Zend_Dojo_View_Helper_Dojo_Container
      */
     public function dijitsToJson()
     {
-        // require_once 'Zend/Json.php';
         return Zend_Json::encode($this->getDijits(), false, array('enableJsonExprFinder' => true));
     }
 
@@ -923,7 +914,6 @@ EOJ;
     public function javascriptCaptureStart()
     {
         if ($this->_captureLock) {
-            // require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('Cannot nest captures');
         }
 
@@ -1049,7 +1039,6 @@ EOJ;
             return '';
         }
 
-        // require_once 'Zend/Json.php';
         $scriptTag = '<script type="text/javascript">' . PHP_EOL
                    . (($this->_isXhtml) ? '//<![CDATA[' : '//<!--') . PHP_EOL
                    . '    var djConfig = ' . Zend_Json::encode($djConfigValues) . ';' . PHP_EOL
