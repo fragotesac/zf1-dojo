@@ -92,16 +92,16 @@ class Zend_Dojo_View_Helper_SubmitButtonTest extends PHPUnit\Framework\TestCase
     public function testShouldAllowDeclarativeDijitCreation()
     {
         $html = $this->getElement();
-        $this->assertRegexp('/<input[^>]*(type="submit")/', $html, $html);
-        $this->assertRegexp('/<input[^>]*(dojoType="dijit.form.Button")/', $html, $html);
-        $this->assertRegexp('/<input[^>]*(label="foo")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(type="submit")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(dojoType="dijit.form.Button")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(label="foo")/', $html, $html);
     }
 
     public function testShouldAllowProgrammaticDijitCreation()
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getElement();
-        $this->assertNotRegexp('/<input[^>]*(dojoType="dijit.form.Button")/', $html);
+        $this->assertNotRegExp('/<input[^>]*(dojoType="dijit.form.Button")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('elementId'));
     }
 
@@ -111,6 +111,6 @@ class Zend_Dojo_View_Helper_SubmitButtonTest extends PHPUnit\Framework\TestCase
     public function testHelperShouldRenderContentKeyAsLabelWhenPassed()
     {
         $html = $this->helper->submitButton('foo', '', array('content' => 'Label'));
-        $this->assertRegexp('/<input[^>]*(value="Label")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(value="Label")/', $html, $html);
     }
 }

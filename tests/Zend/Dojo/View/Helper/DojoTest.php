@@ -436,7 +436,7 @@ function() {
                     $this->assertContains('parseOnLoad', $script);
                     break;
                 case 1:
-                    $this->assertRegexp('#src="http://.+/dojo/[0-9.]+/dojo/dojo.xd.js"#', $script);
+                    $this->assertRegExp('#src="http://.+/dojo/[0-9.]+/dojo/dojo.xd.js"#', $script);
                     $this->assertContains('/>', $script);
                     break;
                 case 2:
@@ -465,8 +465,8 @@ function() {
         $this->helper->setView($view);
         $this->setupDojo();
         $html = $this->helper->__toString();
-        $this->assertRegexp('|<style [^>]*>[\r\n]+\s*<!--|', $html);
-        $this->assertRegexp('|<script [^>]*>[\r\n]+\s*//<!--|', $html);
+        $this->assertRegExp('|<style [^>]*>[\r\n]+\s*<!--|', $html);
+        $this->assertRegExp('|<script [^>]*>[\r\n]+\s*//<!--|', $html);
 
         $this->helper = new Zend_Dojo_View_Helper_Dojo();
         $view->doctype('XHTML1_STRICT');
@@ -477,8 +477,8 @@ function() {
         /**
          * @todo should stylesheets be escaped as CDATA when isXhtml()?
          */
-        $this->assertRegexp('|<style [^>]*>[\r\n]+\s*<!--|', $html);
-        $this->assertRegexp('|<script [^>]*>[\r\n]+\s*//<!\[CDATA\[|', $html);
+        $this->assertRegExp('|<style [^>]*>[\r\n]+\s*<!--|', $html);
+        $this->assertRegExp('|<script [^>]*>[\r\n]+\s*//<!\[CDATA\[|', $html);
     }
 
     public function testDojoHelperContainerPersistsBetweenViewObjects()
@@ -852,7 +852,7 @@ function() {
         $this->helper->addOnLoad('zend.custom');
         $this->view->textBox('foo', 'bar');
         $test = $this->helper->__toString();
-        $this->assertRegexp('/zendDijits.*?(zend\.custom)/s', $test, 'Generated markup: ' . $test);
+        $this->assertRegExp('/zendDijits.*?(zend\.custom)/s', $test, 'Generated markup: ' . $test);
     }
 
     public function testDojoViewHelperContainerAddOptionsPassesOnAllStringOptions() {
@@ -915,7 +915,7 @@ function() {
                       'onChange' => new Zend_Json_Expr('function(){alert(\'foo\');}'),
                       ));
         $output = $this->helper->dijitsToJson();
-        $this->assertRegexp('#(function\\(\\){alert\\(\'foo\'\\);})#', $output);
+        $this->assertRegExp('#(function\\(\\){alert\\(\'foo\'\\);})#', $output);
     }
 
     /**

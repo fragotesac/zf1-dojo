@@ -94,14 +94,14 @@ class Zend_Dojo_View_Helper_AccordionContainerTest extends PHPUnit\Framework\Tes
     public function testShouldAllowDeclarativeDijitCreation()
     {
         $html = $this->getContainer();
-        $this->assertRegexp('/<div[^>]*(dojoType="dijit.layout.AccordionContainer")/', $html, $html);
+        $this->assertRegExp('/<div[^>]*(dojoType="dijit.layout.AccordionContainer")/', $html, $html);
     }
 
     public function testShouldAllowProgrammaticDijitCreation()
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getContainer();
-        $this->assertNotRegexp('/<div[^>]*(dojoType="dijit.layout.AccordionContainer")/', $html);
+        $this->assertNotRegExp('/<div[^>]*(dojoType="dijit.layout.AccordionContainer")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('container'));
     }
 
@@ -116,9 +116,9 @@ class Zend_Dojo_View_Helper_AccordionContainerTest extends PHPUnit\Framework\Tes
         echo "Captured content ended\n";
         echo $this->view->accordionPane()->captureEnd('bar');
         $html = $this->helper->captureEnd('foo');
-        $this->assertRegexp('/<div[^>]*(id="bar")/', $html);
-        $this->assertRegexp('/<div[^>]*(id="baz")/', $html);
-        $this->assertRegexp('/<div[^>]*(id="foo")/', $html);
+        $this->assertRegExp('/<div[^>]*(id="bar")/', $html);
+        $this->assertRegExp('/<div[^>]*(id="baz")/', $html);
+        $this->assertRegExp('/<div[^>]*(id="foo")/', $html);
         $this->assertEquals(2, substr_count($html, 'dijit.layout.AccordionPane'));
         $this->assertEquals(1, substr_count($html, 'dijit.layout.AccordionContainer'));
         $this->assertContains('started', $html);

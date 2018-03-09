@@ -110,7 +110,7 @@ class Zend_Dojo_Form_Element_SubmitButtonTest extends PHPUnit\Framework\TestCase
         $decorator = $this->element->getDecorator('DijitElement');
         $decorator->setElement($this->element);
         $html = $decorator->render('');
-        $this->assertRegexp('/<(input|button)[^>]*?(value="Submit Button")/', $html, 'Label: ' . $this->element->getLabel() . "\nHTML: " . $html);
+        $this->assertRegExp('/<(input|button)[^>]*?(value="Submit Button")/', $html, 'Label: ' . $this->element->getLabel() . "\nHTML: " . $html);
     }
 
     public function testConstructorSetsLabelToNameIfNoLabelProvided()
@@ -174,6 +174,6 @@ class Zend_Dojo_Form_Element_SubmitButtonTest extends PHPUnit\Framework\TestCase
     {
         $this->element->setLabel('Label!');
         $html = $this->element->render();
-        $this->assertRegexp('/<input[^>]*(value="Label!")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(value="Label!")/', $html, $html);
     }
 }

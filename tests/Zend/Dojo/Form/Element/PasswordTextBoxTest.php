@@ -102,6 +102,6 @@ class Zend_Dojo_Form_Element_PasswordTextBoxTest extends PHPUnit\Framework\TestC
     public function testShouldRenderPasswordInput()
     {
         $html = $this->element->render();
-        $this->assertRegexp('/<input[^>]*(type="password")/', $html);
+        $this->assertRegExp('/<input[^>]*(type="password")/', $html);
     }
 }

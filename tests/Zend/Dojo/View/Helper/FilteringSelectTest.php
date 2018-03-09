@@ -119,14 +119,14 @@ class Zend_Dojo_View_Helper_FilteringSelectTest extends PHPUnit\Framework\TestCa
     public function testShouldAllowDeclarativeDijitCreationAsSelect()
     {
         $html = $this->getElementAsSelect();
-        $this->assertRegexp('/<select[^>]*(dojoType="dijit.form.FilteringSelect")/', $html, $html);
+        $this->assertRegExp('/<select[^>]*(dojoType="dijit.form.FilteringSelect")/', $html, $html);
     }
 
     public function testShouldAllowProgrammaticDijitCreationAsSelect()
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getElementAsSelect();
-        $this->assertNotRegexp('/<select[^>]*(dojoType="dijit.form.FilteringSelect")/', $html);
+        $this->assertNotRegExp('/<select[^>]*(dojoType="dijit.form.FilteringSelect")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('elementId'));
     }
 
@@ -143,8 +143,8 @@ class Zend_Dojo_View_Helper_FilteringSelectTest extends PHPUnit\Framework\TestCa
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getElementAsRemoter();
-        $this->assertNotRegexp('/<input[^>]*(dojoType="dijit.form.FilteringSelect")/', $html);
-        $this->assertRegexp('/<input[^>]*(type="text")/', $html);
+        $this->assertNotRegExp('/<input[^>]*(dojoType="dijit.form.FilteringSelect")/', $html);
+        $this->assertRegExp('/<input[^>]*(type="text")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('elementId'));
 
         $this->assertContains('var stateStore;', $this->view->dojo()->getJavascript());

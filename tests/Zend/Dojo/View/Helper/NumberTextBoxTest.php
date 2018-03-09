@@ -95,20 +95,20 @@ class Zend_Dojo_View_Helper_NumberTextBoxTest extends PHPUnit\Framework\TestCase
     public function testShouldAllowDeclarativeDijitCreation()
     {
         $html = $this->getElement();
-        $this->assertRegexp('/<input[^>]*(dojoType="dijit.form.NumberTextBox")/', $html, $html);
+        $this->assertRegExp('/<input[^>]*(dojoType="dijit.form.NumberTextBox")/', $html, $html);
     }
 
     public function testShouldAllowProgrammaticDijitCreation()
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getElement();
-        $this->assertNotRegexp('/<input[^>]*(dojoType="dijit.form.NumberTextBox")/', $html);
+        $this->assertNotRegExp('/<input[^>]*(dojoType="dijit.form.NumberTextBox")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('elementId'));
     }
 
     public function testShouldCreateTextInput()
     {
         $html = $this->getElement();
-        $this->assertRegexp('/<input[^>]*(type="text")/', $html);
+        $this->assertRegExp('/<input[^>]*(type="text")/', $html);
     }
 }

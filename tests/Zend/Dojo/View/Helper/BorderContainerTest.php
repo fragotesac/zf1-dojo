@@ -93,14 +93,14 @@ class Zend_Dojo_View_Helper_BorderContainerTest extends PHPUnit\Framework\TestCa
     public function testShouldAllowDeclarativeDijitCreation()
     {
         $html = $this->getContainer();
-        $this->assertRegexp('/<div[^>]*(dojoType="dijit.layout.BorderContainer")/', $html, $html);
+        $this->assertRegExp('/<div[^>]*(dojoType="dijit.layout.BorderContainer")/', $html, $html);
     }
 
     public function testShouldAllowProgrammaticDijitCreation()
     {
         Zend_Dojo_View_Helper_Dojo::setUseProgrammatic();
         $html = $this->getContainer();
-        $this->assertNotRegexp('/<div[^>]*(dojoType="dijit.layout.BorderContainer")/', $html);
+        $this->assertNotRegExp('/<div[^>]*(dojoType="dijit.layout.BorderContainer")/', $html);
         $this->assertNotNull($this->view->dojo()->getDijit('container'));
     }
 
