@@ -23,7 +23,6 @@
 require_once 'Zend/Dojo/BuildLayer.php';
 require_once 'Zend/Dojo.php';
 require_once 'Zend/View.php';
-require_once 'Zend/Json.php';
 
 /**
  * @category   Zend

@@ -26,9 +26,6 @@ require_once 'Zend/Dojo/Form/Element/Button.php';
 /** Zend_View */
 require_once 'Zend/View.php';
 
-/** Zend_Registry */
-require_once 'Zend/Registry.php';
-
 /** Zend_Translate */
 require_once 'Zend/Translate.php';
 

@@ -26,9 +26,6 @@ require_once 'Zend/Dojo/View/Helper/HorizontalSlider.php';
 /** Zend_View */
 require_once 'Zend/View.php';
 
-/** Zend_Registry */
-require_once 'Zend/Registry.php';
-
 /** Zend_Dojo_Form */
 require_once 'Zend/Dojo/Form.php';
 

@@ -440,7 +440,6 @@ class Zend_Dojo_DataTest extends PHPUnit\Framework\TestCase
                 array('id' => 4, 'title' => 'Four', 'name' => 'Fourth'),
             ),
         );
-        require_once 'Zend/Json.php';
         $json = Zend_Json::encode($data);
         $dojoData = new Zend_Dojo_Data();
         $dojoData->fromJson($json);

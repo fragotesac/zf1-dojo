@@ -26,9 +26,6 @@ require_once 'Zend/Dojo/View/Helper/TabContainer.php';
 /** Zend_View */
 require_once 'Zend/View.php';
 
-/** Zend_Registry */
-require_once 'Zend/Registry.php';
-
 /** Zend_Dojo_View_Helper_Dojo */
 require_once 'Zend/Dojo/View/Helper/Dojo.php';
 

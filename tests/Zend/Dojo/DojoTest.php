@@ -23,18 +23,6 @@
 /** Zend_Dojo */
 require_once 'Zend/Dojo.php';
 
-/** Zend_Form */
-require_once 'Zend/Form.php';
-
-/** Zend_Form_Element */
-require_once 'Zend/Form/Element.php';
-
-/** Zend_Form_SubForm */
-require_once 'Zend/Form/SubForm.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
 /**
  * Test class for Zend_Dojo
  *
