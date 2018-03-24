@@ -64,7 +64,6 @@ abstract class Zend_Dojo_View_Helper_DijitContainer extends Zend_Dojo_View_Helpe
         );
 
         ob_start();
-        return;
     }
 
     /**
@@ -80,8 +79,12 @@ abstract class Zend_Dojo_View_Helper_DijitContainer extends Zend_Dojo_View_Helpe
         }
 
         $content = ob_get_clean();
+        // These two are extracted below
+        $params = null;
+        $attribs = null;
         extract($this->_captureInfo[$id]);
         unset($this->_captureLock[$id], $this->_captureInfo[$id]);
+
         return $this->_createLayoutContainer($id, $content, $params, $attribs);
     }
 }

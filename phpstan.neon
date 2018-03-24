@@ -1,2 +1,7 @@
 parameters:
     ignoreErrors:
+        - '#Call to an undefined method Zend_View_Interface::.+\(\)\.#'
+        - '#Call to an undefined method object::toArray\(\)\.#'
+        - '#Casting to .+ something that.s already .+\.#'
+        - '#Strict comparison using !== between null and Zend_Form\|Zend_Form_DisplayGroup\|Zend_Form_Element will always evaluate to true\.#'
+        - '#Strict comparison using === between null and string will always evaluate to false\.#'
