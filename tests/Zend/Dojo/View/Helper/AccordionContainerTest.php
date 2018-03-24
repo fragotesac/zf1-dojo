@@ -114,28 +114,37 @@ class Zend_Dojo_View_Helper_AccordionContainerTest extends PHPUnit\Framework\Tes
         $this->assertContains('Nested Content', $html);
     }
 
-    /**
-     */
     public function testCapturingShouldRaiseErrorWhenDuplicateIdDiscovered()
     {
         $this->expectException(\Zend_Dojo_View_Exception::class);
+        $this->expectExceptionMessage('Lock already exists for id "bar"');
 
-        $this->helper->captureStart('foo', array(), array('style' => 'height: 200px; width: 100px;'));
-        $this->view->accordionPane()->captureStart('bar', array('title' => 'Captured Pane'));
-        $this->view->accordionPane()->captureStart('bar', array('title' => 'Captured Pane'));
-        echo 'Captured Content';
-        echo $this->view->accordionPane()->captureEnd('bar');
-        echo $this->view->accordionPane()->captureEnd('bar');
-        $html = $this->helper->captureEnd('foo');
+        try {
+            $this->helper->captureStart('foo', array(), array('style' => 'height: 200px; width: 100px;'));
+            $this->view->accordionPane()->captureStart('bar', array('title' => 'Captured Pane'));
+            $this->view->accordionPane()->captureStart('bar', array('title' => 'Captured Pane'));
+        } catch (Exception $e) {
+            // Closing the output buffering to stop the
+            // "Test code or tested code did not (only) close its own output buffers" risky error message
+            $this->view->accordionPane()->captureEnd('bar');
+            $html = $this->helper->captureEnd('foo');
+            throw $e;
+        }
     }
 
-    /**
-     */
     public function testCapturingShouldRaiseErrorWhenNonexistentIdPassedToEnd()
     {
         $this->expectException(\Zend_Dojo_View_Exception::class);
+        $this->expectExceptionMessage('No capture lock exists for id "bar"; nothing to capture');
 
-        $this->helper->captureStart('foo', array(), array('style' => 'height: 200px; width: 100px;'));
-        $html = $this->helper->captureEnd('bar');
+        try {
+            $this->helper->captureStart('foo', array(), array('style' => 'height: 200px; width: 100px;'));
+            $html = $this->helper->captureEnd('bar');
+        } catch (Exception $e) {
+            // Closing the output buffering to stop the
+            // "Test code or tested code did not (only) close its own output buffers" risky error message
+            $this->helper->captureEnd('foo');
+            throw $e;
+        }
     }
 }

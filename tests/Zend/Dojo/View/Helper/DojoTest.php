@@ -121,6 +121,7 @@ class Zend_Dojo_View_Helper_DojoTest extends PHPUnit\Framework\TestCase
 
     /**
      * @group ZF-3916
+     * @doesNotPerformAssertions
      */
     public function testRequireModuleShouldAllowDashAndUnderscoreCharacters()
     {
@@ -303,6 +304,7 @@ class Zend_Dojo_View_Helper_DojoTest extends PHPUnit\Framework\TestCase
 
     /**
      * @group ZF-3916
+     * @doesNotPerformAssertions
      */
     public function testAddingStylesheetModuleShouldAllowDashAndUnderscoreCharacters()
     {
