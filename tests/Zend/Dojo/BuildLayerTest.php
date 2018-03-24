@@ -20,9 +20,6 @@
  * @version    $Id$
  */
 
-require_once 'Zend/Dojo/BuildLayer.php';
-require_once 'Zend/Dojo.php';
-require_once 'Zend/View.php';
 
 /**
  * @category   Zend

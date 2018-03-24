@@ -20,8 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo */
-require_once 'Zend/Dojo.php';
 
 /**
  * Test class for Zend_Dojo

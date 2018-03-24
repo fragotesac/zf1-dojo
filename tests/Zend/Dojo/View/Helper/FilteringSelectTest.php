@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_View_Helper_FilteringSelect */
-require_once 'Zend/Dojo/View/Helper/FilteringSelect.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Dojo_View_Helper_Dojo */
-require_once 'Zend/Dojo/View/Helper/Dojo.php';
 
 /**
  * Test class for Zend_Dojo_View_Helper_FilteringSelect.
@@ -70,7 +62,6 @@ class Zend_Dojo_View_Helper_FilteringSelectTest extends PHPUnit\Framework\TestCa
 
     public function getView()
     {
-        require_once 'Zend/View.php';
         $view = new Zend_View();
         $view->addHelperPath('Zend/Dojo/View/Helper/', 'Zend_Dojo_View_Helper');
         return $view;

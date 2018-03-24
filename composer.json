@@ -18,7 +18,8 @@
         "diablomedia/zendframework1-json": "^1.0.0",
         "diablomedia/zendframework1-registry": "^1.0.0",
         "diablomedia/zendframework1-filter": "dev-master",
-        "diablomedia/zendframework1-view": "dev-master"
+        "diablomedia/zendframework1-view": "dev-master",
+        "diablomedia/zendframework1-form": "dev-master"
     },
     "autoload": {
         "psr-0": {

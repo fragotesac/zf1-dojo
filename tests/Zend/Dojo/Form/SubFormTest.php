@@ -20,11 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_Form_SubForm */
-require_once 'Zend/Dojo/Form/SubForm.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
 
 /**
  * Test class for Zend_Dojo_SubForm

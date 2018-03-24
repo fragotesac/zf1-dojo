@@ -20,17 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_View_Helper_SimpleTextarea */
-require_once 'Zend/Dojo/View/Helper/SimpleTextarea.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Dojo */
-require_once 'Zend/Dojo.php';
-
-/** Zend_Dojo_View_Helper_Dojo */
-require_once 'Zend/Dojo/View/Helper/Dojo.php';
 
 /**
  * Test class for Zend_Dojo_View_Helper_SimpleTextarea.
@@ -73,7 +62,6 @@ class Zend_Dojo_View_Helper_SimpleTextareaTest extends PHPUnit\Framework\TestCas
 
     public function getView()
     {
-        require_once 'Zend/View.php';
         $view = new Zend_View();
         Zend_Dojo::enableView($view);
         return $view;

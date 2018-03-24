@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_Form_Element_RadioButton */
-require_once 'Zend/Dojo/Form/Element/RadioButton.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Dojo_View_Helper_Dojo */
-require_once 'Zend/Dojo/View/Helper/Dojo.php';
 
 /**
  * Test class for Zend_Dojo_Form_Element_RadioButton.
@@ -70,7 +62,6 @@ class Zend_Dojo_Form_Element_RadioButtonTest extends PHPUnit\Framework\TestCase
 
     public function getView()
     {
-        require_once 'Zend/View.php';
         $view = new Zend_View();
         $view->addHelperPath('Zend/Dojo/View/Helper/', 'Zend_Dojo_View_Helper');
         return $view;
@@ -126,7 +117,6 @@ class Zend_Dojo_Form_Element_RadioButtonTest extends PHPUnit\Framework\TestCase
 
     public function testOptionsShouldBeTranslatable()
     {
-        require_once 'Zend/Translate.php';
         $translations = array(
             'Foo' => 'This is Foo',
             'Bar' => 'This is Bar',

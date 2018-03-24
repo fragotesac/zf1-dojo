@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_View_Helper_AccordionContainer */
-require_once 'Zend/Dojo/View/Helper/AccordionContainer.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Dojo_View_Helper_Dojo */
-require_once 'Zend/Dojo/View/Helper/Dojo.php';
 
 /**
  * Test class for Zend_Dojo_View_Helper_AccordionContainer.
@@ -70,7 +62,6 @@ class Zend_Dojo_View_Helper_AccordionContainerTest extends PHPUnit\Framework\Tes
 
     public function getView()
     {
-        require_once 'Zend/View.php';
         $view = new Zend_View();
         $view->addHelperPath('Zend/Dojo/View/Helper/', 'Zend_Dojo_View_Helper');
         return $view;

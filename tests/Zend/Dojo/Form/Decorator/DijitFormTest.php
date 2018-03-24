@@ -20,17 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_Dojo_Form_Decorator_DijitForm */
-require_once 'Zend/Dojo/Form/Decorator/DijitForm.php';
-
-/** Zend_Dojo_Form_SubForm */
-require_once 'Zend/Dojo/Form.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Dojo_View_Helper_Dojo */
-require_once 'Zend/Dojo/View/Helper/Dojo.php';
 
 /**
  * Test class for Zend_Dojo_Form_Decorator_DijitForm.
@@ -75,7 +64,6 @@ class Zend_Dojo_Form_Decorator_DijitFormTest extends PHPUnit\Framework\TestCase
 
     public function getView()
     {
-        require_once 'Zend/View.php';
         $view = new Zend_View();
         $view->addHelperPath('Zend/Dojo/View/Helper/', 'Zend_Dojo_View_Helper');
         return $view;
