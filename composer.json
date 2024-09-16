@@ -11,14 +11,14 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-exception": "^1.1.1",
-        "diablomedia/zendframework1-config": "^2.0.5",
-        "diablomedia/zendframework1-loader": "^1.0.5",
-        "diablomedia/zendframework1-json": "^1.0.7",
-        "diablomedia/zendframework1-registry": "^1.0.5",
-        "diablomedia/zendframework1-filter": "^1.0.6",
-        "diablomedia/zendframework1-view": "^1.0.5",
-        "diablomedia/zendframework1-form": "^1.0.6"
+        "fragotesac/zf1-exception": "^1.1.1",
+        "fragotesac/zf1-config": "^2.0.5",
+        "fragotesac/zf1-loader": "^1.0.5",
+        "fragotesac/zf1-json": "^1.0.7",
+        "fragotesac/zf1-registry": "^1.0.5",
+        "fragotesac/zf1-filter": "^1.0.6",
+        "fragotesac/zf1-view": "^1.0.5",
+        "fragotesac/zf1-form": "^1.0.6"
     },
     "autoload": {
         "psr-0": {
@@ -37,7 +37,7 @@
         "phpunit/phpunit": "^9.6.19 || ^10.5.18",
         "phpstan/phpstan": "1.10.67",
         "friendsofphp/php-cs-fixer": "3.54.0",
-        "diablomedia/zendframework1-translate": ">=1.0.5",
+        "fragotesac/zf1-translate": ">=1.0.5",
         "maglnet/composer-require-checker": "^3.0.0",
         "phpro/grumphp-shim": "^2.0.0"
     },
